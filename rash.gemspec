@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name = %q{rash_alt}
   s.authors = ["tcocca", "Shigenobu Nishikawa"]
   s.description = %q{simple extension to Hashie::Mash for rubyified keys, all keys are converted to underscore to eliminate horrible camelCasing}
-  s.email = %q{tom.cocca@gmail.com, shishi.s.n@gmail.com}
+  s.email = %q{tom.cocca@gmail.com, shishi@srevo.net}
   s.homepage = "https://github.com/shishi/rash_alt"
   s.rdoc_options = ["--charset=UTF-8"]
   s.summary = %q{simple extension to Hashie::Mash for rubyified keys}
