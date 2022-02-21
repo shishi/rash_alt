@@ -3,6 +3,7 @@ require 'hashie/mash'
 module Hashie
   class Mash
     class Rash < Mash
+      # NOTE: I have no idea I should do all keys `disable_warnings` for avoiding Hashie v5's warnings
 
       protected
 

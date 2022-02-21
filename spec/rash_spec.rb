@@ -48,6 +48,9 @@ describe Hashie::Mash::Rash do
   end
 
   it "should allow camelCased accessors" do
+    #avoiding hashie v5- warnings
+    subject.class.disable_warnings(:varOne)
+
     subject.varOne.should == 1
     subject.varOne = "once"
     subject.varOne.should == "once"
@@ -55,6 +58,9 @@ describe Hashie::Mash::Rash do
   end
 
   it "should allow camelCased accessors on nested hashes" do
+    # avoiding hashie v5-  warnings
+    subject.class.disable_warnings(:nestedOne)
+
     subject.nested.nestedOne.should == "One"
     subject.nested.nestedOne = "once"
     subject.nested.nested_one.should == "once"
