@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'hashie'
 
 describe Hashie::Mash::Rash do
   subject {
@@ -49,7 +50,7 @@ describe Hashie::Mash::Rash do
 
   it "should allow camelCased accessors" do
     #avoiding hashie v5- warnings
-    subject.class.disable_warnings(:varOne)
+    subject.class.disable_warnings(:varOne) if Gem::Version.new(Hashie::VERSION) >= Gem::Version.new("5.0.0")
 
     subject.varOne.should == 1
     subject.varOne = "once"
@@ -59,7 +60,7 @@ describe Hashie::Mash::Rash do
 
   it "should allow camelCased accessors on nested hashes" do
     # avoiding hashie v5-  warnings
-    subject.class.disable_warnings(:nestedOne)
+    subject.class.disable_warnings(:nestedOne) if Gem::Version.new(Hashie::VERSION) >= Gem::Version.new("5.0.0")
 
     subject.nested.nestedOne.should == "One"
     subject.nested.nestedOne = "once"

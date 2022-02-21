@@ -74,6 +74,7 @@ WARN -- : You are setting a key that conflicts with a built-in method Hashie::Ma
 ```
 
 if you want to disable this, use `disable_warnings`
+
 https://github.com/hashie/hashie#mash
 
 ## Note on Patches/Pull Requests
