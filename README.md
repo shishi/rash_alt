@@ -65,6 +65,17 @@ $ gem install rash_alt
 @rash.nested_two.nested_three # => 23
 ```
 
+## Known Issue
+
+You may have Hashie's warnings like this
+
+```
+WARN -- : You are setting a key that conflicts with a built-in method Hashie::Mash::Rash#varOne defined in Hashie::Mash::Rash. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+```
+
+if you want to disable this, use `disable_warnings`
+https://github.com/hashie/hashie#mash
+
 ## Note on Patches/Pull Requests
 
 * Fork the project.
